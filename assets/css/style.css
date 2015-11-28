@@ -303,10 +303,11 @@ a:hover {
 	z-index: -1;
 	text-align: justify;
 	padding: 3%;
-	line-height: 1.25em;
+	line-height: 1.1em;
 	background-color: white;
 	opacity: 0;
 	transition: 0.4s;
+	overflow: auto;
 }
 .content-active {
 	opacity: .75;
