@@ -1,4 +1,4 @@
-/* Styling general to all pages. */
+/*** Styling general to all pages. ***/
 body {
 	margin: auto;
 	font-family: "Raleway";
@@ -12,10 +12,19 @@ a:visited {
 	color: white;
 }
 a:hover {
-	color: blue;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-o-transition: all 0.3s;
+	font-weight: 600;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+/* Content on each page. */
+.content-container {
+	position: absolute;
+	top: 51px;
+	left: 50%;
+	transform: translate(-50%);
+	width: 90%;
+	height: 90%;
 }
 .coming-soon {
 	position: absolute;
@@ -25,7 +34,6 @@ a:hover {
 	color: white;
 	font-size: 20px;
 }
-
 /* Styling for navigation bar. */
 .navbar-container {
 	position: fixed;
@@ -38,6 +46,7 @@ a:hover {
 .navbar-item {
 	margin: 1em 1em;
 }
+/* Current page bullets. */
 .current {
 	display: inline-block;
 	width: .5em;
@@ -53,7 +62,6 @@ a:hover {
 .current-selected {
 	visibility: visible;
 }
-
 /* Styling for footer. */
 .footer-container {
 	position: absolute;
@@ -67,9 +75,241 @@ a:hover {
 .footer-item {
 	margin: 1em 3em;
 }
-#mail:hover {
-	color: green;
+.footer-button {
+	width: 3%;
 }
-#pinterest:hover {
-	color: red;
+.footer-button:hover {
+	transform: scale(1.5);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+
+/*** Styling for home page content. ***/
+#name-container {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	color: white;
+}
+#name-container:hover {
+	cursor: default;
+}
+#name {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%);
+	font-size: 6em;
+	text-align: center;
+}
+#description {
+	position: absolute;
+	width: 100%;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%);
+	font-size: 1.75em;
+}
+/* Photo slider. */
+#picture-container {
+	position: absolute;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+}
+.arrow {
+	background-color: white;
+	display: inline-block;
+	height: 8%;
+	width: 8%;
+	transform: translateY(-250%);
+	border-radius: 10px;
+	border: solid black 1px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 100%;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+.arrow:hover {
+	cursor: pointer;
+	background-color: #505050;
+}
+.arrow:active {
+	background-color: black;
+}
+#left-arrow {
+	width: 100%;
+}
+#pic-caption {
+	display: inline-block;
+	transform: translateY(15%);
+	margin-right: 4%;
+	margin-left: 2%;
+	height: 70%;
+	width: 55%;
+}
+#picture {
+	height: 90%;
+	width: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+#picture-content {
+	transform: translateY(-5%);
+	border-radius: 10px;
+	width: 100%;
+}
+#right-arrow {
+	width: 100%;
+}
+#caption {
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	color: white;
+	margin-top: .5em;
+}
+
+/*** Styling for about page. ***/
+#carousel-container {
+	width: 960px;
+	height: 450px;
+	top: 5%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	border-radius: 10px;
+}
+#carousel {
+	position: absolute;
+	width: 4800px;
+	height: 100%;
+	margin-left: 0px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+.carousel-item {
+	width: 960px;
+	height: 100%;
+	position: relative;
+	float: left;
+	text-align: center;
+	color: white;
+}
+.carousel-item-content {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%);
+	width: 70%;
+	height: 75%;
+	background-color: black;
+	opacity: .75;
+	padding-top: 2em;
+	letter-spacing: 1px;
+	line-height: 2em;
+}
+.carousel-item-title {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.carousel-item-text {
+	padding: 2em;
+	color: white;
+	opacity: 1;
+	z-index: 2;
+}
+#carousel-prev {
+	background-color: white;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    left: 60px;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: solid black 1px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+#carousel-next {
+	background-color: white;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    right: 60px;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: solid black 1px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+#carousel-prev:hover {
+	cursor: pointer;
+	background-color: #505050;
+}
+#carousel-prev:active {
+	background-color: black;
+}
+#carousel-next:hover {
+	cursor: pointer;
+	background-color: #505050;
+}
+#carousel-next:active {
+	background-color: black;
+}
+
+/*** Styling for the passions page. ***/
+.content-item-container {
+	position: relative;
+	height: 100%;
+	width: 33%;
+	float: left;
+}
+.content-item-img {
+	position: absolute;
+	width: 60%;
+	top: 25%;
+	left: 25%;
+	transition: linear 0.3s;
+}
+.content-item-img:hover {
+	cursor: pointer;
+	border: solid white 2px;
+	padding: 1%;
+}
+.content-item-active {
+	transform: translateY(-100%);
+    transition: linear 0.3s;
+}
+.content-item {
+	position: absolute;
+	width: 80%;
+	height: 50%;
+	top: 20%;
+	left: 15%;
+	z-index: -1;
+	text-align: justify;
+	padding: 3%;
+	line-height: 1.25em;
+	background-color: white;
+	opacity: 0;
+	transition: 0.4s;
+}
+.content-active {
+	opacity: .75;
+	transform: translateY(15%);
+	transition: linear 0.4s;
 }
